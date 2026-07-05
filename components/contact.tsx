@@ -11,17 +11,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    details: ['Corporate Office', 'India'],
+    details: ['Corporate Office', 'Shop No. 5, AJ Avenue, Cummins College Road, Karvenagar, Pune – 411052, Maharashtra, India'],
   },
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['info@gollyaavanta.com', 'support@gollyaavanta.com'],
+    details: ['gollyaavanta@gmail.com'],
   },
   {
     icon: Phone,
     title: 'Call Us',
-    details: ['+91 XXXX XXXX XX', '+91 XXXX XXXX XX'],
+    details: ['+91 7822868900', '+91 7397944475'],
   },
   {
     icon: Clock,
@@ -38,14 +38,39 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send");
+    }
+
+    alert("Message sent successfully!");
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+  } catch (error) {
+    alert("Something went wrong.");
+  }
+};
   return (
     <section id="contact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+      {/* Container horizontal spacing matches max-w-6xl from the About section layout */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium bg-accent/10 text-accent border-accent/20 mb-6">
             Get In Touch

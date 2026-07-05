@@ -3,7 +3,7 @@ import { Building2 } from 'lucide-react';
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
-  { name: 'About Us', href: '#about' },
+  { name: 'About Us', href: '/about' },
   { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -79,17 +79,23 @@ export function Footer() {
               <li className="text-sm text-background/70">
                 <span className="font-medium text-background/90">Address:</span>
                 <br />
-                Corporate Office, India
+               Registered Office 
+Shop No. 5, AJ Avenue, 
+Cummins College Road, 
+Karvenagar, 
+Pune – 411052, 
+Maharashtra, India 
               </li>
               <li className="text-sm text-background/70">
                 <span className="font-medium text-background/90">Email:</span>
                 <br />
-                info@gollyaavanta.com
+                gollyaavanta@gmail.com 
               </li>
               <li className="text-sm text-background/70">
                 <span className="font-medium text-background/90">Phone:</span>
                 <br />
-                +91 XXXX XXXX XX
+               +91 7822868900 
+
               </li>
             </ul>
           </div>

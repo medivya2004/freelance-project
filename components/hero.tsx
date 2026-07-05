@@ -8,7 +8,7 @@ export function Hero() {
       className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/10"
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8881_1px,transparent_1px),linear-gradient(to_bottom,#8881_1px,transparent_1px)] bg-[size:24px_24px]" />
-      <div className="container mx-auto px-4 py-24 md:py-32 lg:py-40">
+      <div className="container mx-auto px-4 py-24 md:py-32 lg:py-24">
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary border-primary/20">
             <span className="mr-2 h-2 w-2 rounded-full bg-primary animate-pulse" />
